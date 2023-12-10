@@ -1,0 +1,33 @@
+composer require laravel/breeze --dev
+php artisan breeze:install api
+
+npm create vite@latest mini-rt-react -- --template react
+npm install
+npm run dev
+npm install react-router-dom
+npm install axios
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+=> index.css 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+npm run dev
+
+
+=> Laravel
+php artisan make:model Ticket --all
+php artisan make:controller TicketApiController --api
+php artisan make:model Status --all
+php artisan make:controller StatusApiController --api
+php artisan make:model Agent --all
+php artisan make:controller AgentApiController --api
+php artisan make:model Queue --all
+php artisan make:controller QueueApiController --api
+
+//define methods and relationship for each model
+php artisan migrate
+
+config/auth.php => assign
+
+routes/api.php
